@@ -1,5 +1,6 @@
 codemod (for python3 + windows)
 =======
+This fork has removed some dependencies that are unavailable for Windows.
 
 Overview
 --------
@@ -18,11 +19,9 @@ Install
 -------
 In a virtual environment or as admin user
 
-`pip install codemod`
-
-or system wide with sudo
-
-`sudo -H pip install codemod`
+```sh
+python -m pip install git+https://github.com/danielbaraniak/codemod
+```
 
 Usage
 -----
@@ -96,6 +95,7 @@ Dependencies
 ------------
 
 * python3
+* curses / windows-curses
 
 Credits
 -------
