@@ -1,4 +1,4 @@
-codemod
+codemod (for python3 + windows)
 =======
 
 [![PyPI](https://img.shields.io/pypi/v/codemod.svg)](https://pypi.python.org/pypi/codemod)

@@ -12,8 +12,7 @@ description = (
 
 setup(
     name='codemod',
-    version="1.0.0",
-    url='http://github.com/facebook/codemod',
+    version="1.0.1",
     license='Apache License 2.0',
     author="Facebook",
     author_email="facebook@facebook.com",

@@ -8,10 +8,6 @@ import sys
 
 import curses
 
-import fcntl
-import termios
-import struct
-
 
 def _unicode(s, encoding='utf-8'):
         if type(s) == bytes:
@@ -26,24 +22,11 @@ def terminal_get_size(default_size=(25, 80)):
     if they can be determined, or `default_size` if they can't.
     """
 
-    def ioctl_gwinsz(fd):  # TABULATION FUNCTIONS
-        try:  # Discover terminal width
-            return struct.unpack(
-                'hh', fcntl.ioctl(fd, termios.TIOCGWINSZ, '1234')
-            )
-        except Exception:
-            return None
+    size = None
+    terminal_size = os.get_terminal_size()
+    if terminal_size:
+        size = terminal_size.lines, terminal_size.columns
 
-    # try open fds
-    size = ioctl_gwinsz(0) or ioctl_gwinsz(1) or ioctl_gwinsz(2)
-    if not size:
-        # ...then ctty
-        try:
-            fd = os.open(os.ctermid(), os.O_RDONLY)
-            size = ioctl_gwinsz(fd)
-            os.close(fd)
-        except Exception:
-            pass
     if not size:
         # env vars or finally defaults
         try:
