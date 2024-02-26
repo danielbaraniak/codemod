@@ -1,12 +1,6 @@
 codemod (for python3 + windows)
 =======
 
-[![PyPI](https://img.shields.io/pypi/v/codemod.svg)](https://pypi.python.org/pypi/codemod)
-[![downloads](https://img.shields.io/pypi/dw/codemod.svg)](https://pypi.python.org/pypi/codemod)
-[![Travis CI](http://img.shields.io/travis/facebook/codemod.svg)](https://travis-ci.org/facebook/codemod)
-[![Code Health](https://landscape.io/github/rochacbruno/codemod/master/landscape.svg?style=flat)](https://landscape.io/github/rochacbruno/codemod/master)
-
-
 Overview
 --------
 
@@ -101,7 +95,7 @@ It's one of those tools where, the more you use it, the more you think of places
 Dependencies
 ------------
 
-* python2
+* python3
 
 Credits
 -------
